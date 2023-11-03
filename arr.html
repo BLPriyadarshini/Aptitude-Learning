@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C Array Questions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+            background-image : url("https://media.istockphoto.com/id/1395321519/photo/digital-background-with-movement-of-glowing-particles-complex-technologies-of-big-data-3d.webp?b=1&s=170667a&w=0&k=20&c=0SWIokXTPzOv6WfRPmyBIV9-6Twxs7SfMAMZCJ6Pw-A=");
+        }
+        .question {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 24px;
+        }
+        p {
+            font-size: 18px;
+        }
+        .answer {
+            font-weight: bold;
+            color: green;
+        }
+        .explanation {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="question">
+        <h1>C Array Question 1</h1>
+        <p>Question: What is an array in C?</p>
+        <p><span class="answer">Answer:</span> An array is a collection of elements of the same data type, stored in contiguous memory locations.</p>
+        <p class="explanation">Explanation: Arrays provide a convenient way to store and access multiple values of the same type.</p>
+    </div>
+
+    <!-- Repeat the following structure for each of the C array questions -->
+
+    <div class="question">
+        <h1>C Array Question 2</h1>
+        <p>Question: How do you declare an array in C?</p>
+        <p><span class="answer">Answer:</span> You can declare an array by specifying the data type of its elements followed by the array name and the number of elements, e.g., `int myArray[5];`</p>
+        <p class="explanation">Explanation: This declares an integer array with 5 elements.</p>
+    </div>
+
+    <div class="question">
+        <h1>C Array Question 3</h1>
+        <p>Question: How do you initialize an array in C?</p>
+        <p><span class="answer">Answer:</span> You can initialize an array at the time of declaration by providing a list of values enclosed in curly braces, e.g., `int myArray[5] = {1, 2, 3, 4, 5};`</p>
+        <p class="explanation">Explanation: This initializes the array with the specified values.</p>
+    </div>
+
+    <div class="question">
+        <h1>C Array Question 4</h1>
+        <p>Question: How do you access elements of an array in C?</p>
+        <p><span class="answer">Answer:</span> You can access elements of an array by using the array name followed by the index in square brackets, e.g., `int x = myArray[2];`</p>
+        <p class="explanation">Explanation: This accesses the third element (index 2) of the array.</p>
+    </div>
+
+    <div class="question">
+        <h1>C Array Question 5</h1>
+        <p>Question: What is the maximum index of an array in C?</p>
+        <p><span class="answer">Answer:</span> The maximum index of an array in C is one less than the size of the array. For example, if an array has 5 elements, the maximum index is 4.</p>
+        <p class="explanation">Explanation: Array indices in C are zero-based.</p>
+    </div>
+
+    <div class="question">
+        <h1>C Array Question 6</h1>
+        <p>Question: How do you find the length of an array in C?</p>
+        <p><span class="answer">Answer:</span> You can find the length of an array by dividing the size of the array in bytes by the size of one element, e.g., `int length = sizeof(myArray) / sizeof(myArray[0]);`</p>
+        <p class="explanation">Explanation: This calculates the number of elements in the array.</p>
+    </div>
+
+    <div class="question">
+        <h1>C Array Question 7</h1>
+        <p>Question: Can you change the size of an array in C after it has been declared?</p>
+        <p><span class="answer">Answer:</span> No, the size of an array in C is fixed at the time of declaration and cannot be changed.</p>
+        <p class="explanation">Explanation: To work with dynamic-sized collections, you can use pointers and dynamic memory allocation.</p>
+    </div>
+
+    <div class="question">
+        <h1>C Array Question 8</h1>
+        <p>Question: How do you find the largest element in an array in C?</p>
+        <p><span class="answer">Answer:</span> You can iterate through the array and keep track of the largest element, e.g.,</p>
+        <pre><code>int max = myArray[0];
+for (int i = 1; i < sizeof(myArray) / sizeof(myArray[0]); i++) {
+    if (myArray[i] > max) {
+        max = myArray[i];
+    }
+}</code></pre>
+        <p class="explanation">Explanation: This code snippet finds the largest element in the array.</p>
+    </div>
+
+    <div class="question">
+        <h1>C Array Question 9</h1>
+        <p>Question: How do you sort an array in C?</p>
+        <p><span class="answer">Answer:</span> You can use sorting algorithms like bubble sort, selection sort, or use library functions like `qsort` to sort an array in C.</p>
+        <p class="explanation">Explanation: Sorting rearranges the elements of the array in a specified order.</p>
+    </div>
+
+    <div class="question">
+        <h1>C Array Question 10</h1>
+        <p>Question: What is a two-dimensional array in C?</p>
+        <p><span class="answer">Answer:</span> A two-dimensional array in C is an array of arrays. It is used to represent a table or grid of elements with rows and columns.</p>
+        <p class="explanation">Explanation: Elements in a 2D array are accessed using two indices, one for the row and one for the column.</p>
+    </div>
+
+    <div class="question">
+        <h1>C Array Question 11</h1>
+        <p>Question: How do you initialize a two-dimensional array in C?</p>
+        <p><span class="answer">Answer:</span> You can initialize a 2D array by providing values for each element in the form of nested curly braces, e.g.,</p>
+        <pre><code>int myArray[3][4] = {
+    {1, 2, 3, 4},
+    {5, 6, 7, 8},
+    {9, 10, 11, 12}
+};</code></pre>
+        <p class="explanation">Explanation: This initializes a 3x4 2D array.</p>
+    </div>
+
+    <div class="question">
+        <h1>C Array Question 12</h1>
+        <p>Question: How do you pass a one-dimensional array to a function in C?</p>
+        <p><span class="answer">Answer:</span> You can pass a one-dimensional array to a function by specifying the array name without square brackets in the function parameter, e.g.,</p>
+        <pre><code>void myFunction(int arr[], int size) {
+    // Function code here
+}</code></pre>
+        <p class="explanation">Explanation: The `size` parameter is used to indicate the size of the array.</p>
+    </div>
+
+    <div class="question">
+        <h1>C Array Question 13</h1>
+        <p>Question: How do you pass a two-dimensional array to a function in C?</p>
+        <p><span class="answer">Answer:</span> You can pass a two-dimensional array to a function by specifying the array name and the number of columns in the function parameter, e.g.,</p>
+        <pre><code>void myFunction(int arr[][4], int rows, int cols) {
+    // Function code here
+}</code></pre>
+        <p class="explanation">Explanation: The `rows` and `cols` parameters indicate the dimensions of the array.</p>
+    </div>
+
+    <div class="question">
+        <h1>C Array Question 14</h1>
+        <p>Question: How do you find the sum of all elements in an array in C?</p>
+        <p><span class="answer">Answer:</span> You can iterate through the array and accumulate the sum of elements, e.g.,</p>
+        <pre><code>int sum = 0;
+for (int i = 0; i < sizeof(myArray) / sizeof(myArray[0]); i++) {
+    sum += myArray[i];
+}</code></pre>
+        <p class="explanation">Explanation: This code snippet calculates the sum of elements in the array.</p>
+    </div>
+
+    <div class="question">
+        <h1>C Array Question 15</h1>
+        <p>Question: How do you find the average of all elements in an array in C?</p>
+        <p><span class="answer">Answer:</span> You can find the average by dividing the sum of elements by the number of elements, e.g.,</p>
+        <pre><code>int sum = 0;
+for (int i = 0; i < sizeof(myArray) / sizeof(myArray[0]); i++) {
+    sum += myArray[i];
+}
+double average = (double)sum / (sizeof(myArray) / sizeof(myArray[0]));</code></pre>
+        <p class="explanation">Explanation: This code snippet calculates the average of elements in the array.</p>
+    </div>
+
+</body>
+</html>

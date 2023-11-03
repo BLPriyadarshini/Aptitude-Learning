@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOPICS</title>
+    <link rel="stylesheet">
+</head>
+<style>
+    a:link {
+       color: green;
+       background-color: transparent;
+       text-decoration: none;
+    }
+
+    a:visited {
+      color: pink;
+      background-color: transparent;
+      text-decoration: none;
+   }
+
+   a:hover {
+       color: green;
+       background-color: transparent;
+       text-decoration: underline;
+   }
+
+   a:active {
+      color: yellow;
+      background-color: transparent;
+      text-decoration: underline;
+   }
+
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-image: url("https://media.istockphoto.com/id/1444916714/photo/honeycomb-network-concept-data-transfer-digital-technological-background-3d-rendering.webp?b=1&s=170667a&w=0&k=20&c=skvnjJY14acClIsVhXuENCXvqcm_WsclMaJhSZzdOCU=");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        }
+
+    h1 {
+        color:#5f9ea0;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .topic-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+   .topic {
+        flex: 1;
+        max-width: 250px;
+        background-color: #fff;
+        border: 1px solid black;
+        padding: 20px;
+        margin: 10px;
+        text-align: center;
+        border-radius:10px;
+    }
+    .topic:hover {
+        transform: scale(1.2);
+    }
+
+    .topic img {
+        max-width: 90%;
+        border-radius:15px;
+        border:2px solid black;
+    }
+
+    select {
+        width: 100%;
+        padding: 5px;
+    }
+    button
+    {
+    background-color:darkgreen;
+    border-radius:7px;
+    border:1px solid black;
+}
+
+</style>
+<body>
+   <font type="impact"> <h1>CHOOSE THE TOPIC</h1></font>
+    <div class="topic-list">
+        <div class="topic">
+            <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/Classes-and-Objects-in-C.png" alt="Classes and Objects">
+            <h2><a href="co.html">Classes and Objects</a></h2>
+        </div>
+        <div class="topic">
+            <img src= "https://scaler.com/topics/images/object-oriented-programming-concepts-1024x870.jpg" alt="Oops">
+            <h2><a href="oc.html">Oops Concepts</a></h2>
+      
+        </div>
+        <div class="topic">
+            <img src= "https://t4tutorials.com/wp-content/uploads/2020/04/How-and-in-which-sequence-constructor-and-destructor-invoked-in-C.webp" alt="Constructors and Destructors">
+            <h2><a href="cd.html">Constructors and Destructors</a></h2>
+
+        </div>
+       
+    </div>
+</body>
+</html>

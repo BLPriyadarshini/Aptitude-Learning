@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Quiz</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;    
+}
+
+    .question {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      padding: 20px;
+      margin: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    .options {
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    .option-button {
+      background-color: #3498db;
+      color: #fff;
+      border: none;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .option-button:hover {
+      background-color: #2577a9;
+    }
+
+    #score-container {
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    #submit-button {
+      background-color: #3498db;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      display: none;
+    }
+
+    #submit-button:hover {
+      background-color: #2577a9;
+    }
+
+    #score-bar {
+      height: 10px;
+      background-color: #4CAF50;
+      width: 0;
+      transition: width 0.5s;
+    }
+  </style>
+</head>
+<body>
+  <div class="question">
+    <h1>Simple Quiz</h1>
+    <p id="question">Question 1: What is 2 + 2?</p>
+    <div class="options" id="options-container">
+      <button class="option-button" onclick="selectOption(1)">1</button>
+      <button class="option-button" onclick="selectOption(2)">2</button>
+      <button class="option-button" onclick="selectOption(3)">3</button>
+    </div>
+  </div>
+
+  <div class="question">
+    <p id="question">Question 2: What is 10 * 5?</p>
+    <div class="options" id="options-container">
+      <button class="option-button" onclick="selectOption(45)">45</button>
+      <button class="option-button" onclick="selectOption(50)">50</button>
+      <button class="option-button" onclick="selectOption(55)">55</button>
+    </div>
+  </div>
+
+  <div class="question">
+    <p id="question">Question 3: What is the capital of France?</p>
+    <div class="options" id="options-container">
+      <button class="option-button" onclick="selectOption('London')">L</button>
+      <button class="option-button" onclick="selectOption('Madrid')">M</button>
+      <button class="option-button" onclick="selectOption('Paris')">P</button>
+    </div>
+  </div>
+
+  <div id="score-container">
+    <p id="result">Your Score: <span id="final-score">0</span></p>
+    <div id="score-bar"></div>
+  </div>
+
+  <button id="submit-button" onclick="submitQuiz()">Submit</button>
+
+  <script>
+    const questions = [
+      {
+        question: "What is 2 + 2?",
+        answer: 4,
+      },
+      {
+        question: "What is 10 * 5?",
+        answer: 50,
+      },
+      {
+        question: "What is the capital of France?",
+        answer: "Paris",
+      },
+      // Add more questions here
+    ];
+
+    let currentQuestion = 0;
+    let score = 0;
+    let selectedOptions = [];
+
+    const questionContainers = document.querySelectorAll(".question");
+    const scoreContainer = document.getElementById("score-container");
+    const finalScoreElement = document.getElementById("final-score");
+    const optionsContainers = document.querySelectorAll(".options");
+    const submitButton = document.getElementById("submit-button");
+    const scoreBar = document.getElementById("score-bar");
+
+    function displayQuestion() {
+      if (currentQuestion < questions.length) {
+        const q = questions[currentQuestion];
+        questionContainers[currentQuestion].style.display = "block";
+      } else {
+        showScore();
+      }
+    }
+
+    function selectOption(selectedAnswer) {
+      const q = questions[currentQuestion];
+      selectedOptions[currentQuestion] = selectedAnswer;
+      currentQuestion++;
+      displayQuestion();
+      if (currentQuestion === questions.length) {
+        submitButton.style.display = "block";
+      }
+    }
+
+    function showScore() {
+      for (let i = 0; i < questions.length; i++) {
+        const q = questions[i];
+        if (selectedOptions[i] == q.answer) {
+          score++;
+        }
+      }
+      for (let i = 0; i < questionContainers.length; i++) {
+        questionContainers[i].style.display = "none";
+      }
+      scoreContainer.style.display = "block";
+      finalScoreElement.textContent = score;
+      updateScoreBar();
+    }
+
+    function updateScoreBar() {
+      const totalQuestions = questions.length;
+      const percentage = (score / totalQuestions) * 100;
+      scoreBar.style.width = `${percentage}%`;
+    }
+
+    function submitQuiz() {
+      submitButton.style.display = "none";
+    }
+
+    displayQuestion();
+  </script>
+</body>
+</html>

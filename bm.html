@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C Bit Manipulation Questions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image:url("https://media.istockphoto.com/id/1395321519/photo/digital-background-with-movement-of-glowing-particles-complex-technologies-of-big-data-3d.webp?b=1&s=170667a&w=0&k=20&c=0SWIokXTPzOv6WfRPmyBIV9-6Twxs7SfMAMZCJ6Pw-A=");
+            background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;        
+      }
+        .question {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 24px;
+        }
+        p {
+            font-size: 18px;
+        }
+        .answer {
+            font-weight: bold;
+            color: green;
+        }
+        .explanation {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="question">
+        <h1>C Bit Manipulation Question 1</h1>
+        <p>Question: What is bit manipulation in C?</p>
+        <p><span class="answer">Answer:</span> Bit manipulation in C involves performing operations on individual bits of data, typically using bitwise operators.</p>
+        <p class="explanation">Explanation: Bit manipulation is often used for tasks like setting, clearing, or toggling specific bits in data.</p>
+    </div>
+
+    <!-- Repeat the following structure for each of the C bit manipulation questions -->
+
+    <div class="question">
+        <h1>C Bit Manipulation Question 2</h1>
+        <p>Question: What are the bitwise operators in C?</p>
+        <p><span class="answer">Answer:</span> The bitwise operators in C include AND (&), OR (|), XOR (^), NOT (~), left shift (<<), and right shift (>>).</p>
+        <p class="explanation">Explanation: These operators perform bitwise operations on integers.</p>
+    </div>
+
+    <div class="question">
+        <h1>C Bit Manipulation Question 3</h1>
+        <p>Question: How do you set a specific bit in an integer in C?</p>
+        <p><span class="answer">Answer:</span> You can set a specific bit by using the OR operator (|) with a bitmask, e.g., `num = num | (1 << position);`</p>
+        <p class="explanation">Explanation: This code sets the bit at the specified position to 1 while leaving other bits unchanged.</p>
+    </div>
+
+    <div class="question">
+        <h1>C Bit Manipulation Question 4</h1>
+        <p>Question: How do you clear a specific bit in an integer in C?</p>
+        <p><span class="answer">Answer:</span> You can clear a specific bit by using the AND operator (&) with a bitmask that has the target bit set to 0 and all other bits set to 1, e.g., `num = num & ~(1 << position);`</p>
+        <p class="explanation">Explanation: This code clears the bit at the specified position while leaving other bits unchanged.</p>
+    </div>
+
+    <div class="question">
+        <h1>C Bit Manipulation Question 5</h1>
+        <p>Question: How do you toggle (invert) a specific bit in an integer in C?</p>
+        <p><span class="answer">Answer:</span> You can toggle a specific bit by using the XOR operator (^) with a bitmask that has the target bit set to 1, e.g., `num = num ^ (1 << position);`</p>
+        <p class="explanation">Explanation: This code toggles the bit at the specified position.</p>
+    </div>
+
+    <div class="question">
+        <h1>C Bit Manipulation Question 6</h1>
+        <p>Question: How do you check if a specific bit is set in an integer in C?</p>
+        <p><span class="answer">Answer:</span> You can check if a specific bit is set by using the AND operator (&) with a bitmask that has only the target bit set to 1, e.g., `if (num & (1 << position)) { /* Bit is set */ }`</p>
+        <p class="explanation">Explanation: This code checks if the bit at the specified position is set (1).</p>
+    </div>
+
+    <div class="question">
+        <h1>C Bit Manipulation Question 7</h1>
+        <p>Question: How do you check if a specific bit is clear (unset) in an integer in C?</p>
+        <p><span class="answer">Answer:</span> You can check if a specific bit is clear by using the AND operator (&) with a bitmask that has only the target bit set to 0, e.g., `if (!(num & (1 << position))) { /* Bit is clear */ }`</p>
+        <p class="explanation">Explanation: This code checks if the bit at the specified position is clear (0).</p>
+    </div>
+
+    <div class="question">
+        <h1>C Bit Manipulation Question 8</h1>
+        <p>Question: How do you set multiple bits at once in an integer in C?</p>
+        <p><span class="answer">Answer:</span> You can set multiple bits by using the OR operator (|) with a bitmask that represents the bits to be set, e.g., `num = num | bitmask;`</p>
+        <p class="explanation">Explanation: The bitmask should have 1s at the positions where you want to set bits.</p>
+    </div>
+
+    <div class="question">
+        <h1>C Bit Manipulation Question 9</h1>
+        <p>Question: How do you clear multiple bits at once in an integer in C?</p>
+        <p><span class="answer">Answer:</span> You can clear multiple bits by using the AND operator (&) with a bitmask that represents the bits to be cleared, e.g., `num = num & ~bitmask;`</p>
+        <p class="explanation">Explanation: The bitmask should have 0s at the positions where you want to clear bits.</p>
+    </div>
+
+    <div class="question">
+        <h1>C Bit Manipulation Question 10</h1>
+        <p>Question: How do you check if all bits are set in an integer in C?</p>
+        <p><span class="answer">Answer:</span> You can check if all bits are set by comparing the integer to a bitmask with all bits set, e.g., `if (num == INT_MAX) { /* All bits are set */ }`</p>
+        <p class="explanation">Explanation: `INT_MAX` is a constant representing the maximum value of an `int`.</p>
+    </div>
+
+    <div class="question">
+        <h1>C Bit Manipulation Question 11</h1>
+        <p>Question: How do you check if all bits are clear in an integer in C?</p>
+        <p><span class="answer">Answer:</span> You can check if all bits are clear by comparing the integer to 0, e.g., `if (num == 0) { /* All bits are clear */ }`</p>
+        <p class="explanation">Explanation: If the integer is 0, it means all bits are clear.</p>
+    </div>
+
+    <div class="question">
+        <h1>C Bit Manipulation Question 12</h1>
+        <p>Question: How do you count the number of set bits (1s) in an integer in C?</p>
+        <p><span class="answer">Answer:</span> You can count set bits using bitwise AND and a loop, e.g.,</p>
+        <pre><code>int count = 0;
+while (num > 0) {
+    count += num & 1;
+    num >>= 1;
+}</code></pre>
+        <p class="explanation">Explanation: This code counts the number of set bits in the integer.</p>
+    </div>
+
+    <div class="question">
+        <h1>C Bit Manipulation Question 13</h1>
+        <p>Question: How do you count the number of leading zeros in an integer in C?</p>
+        <p><span class="answer">Answer:</span> You can count leading zeros using a loop and bitwise right shift, e.g.,</p>
+        <pre><code>int count = 0;
+while (!(num & (1 << (sizeof(int) * 8 - 1)))) {
+    count++;
+    num <<= 1;
+}</code></pre>
+        <p class="explanation">Explanation: This code counts the number of leading zeros in the integer.</p>
+    </div>
+
+    <div class="question">
+        <h1>C Bit Manipulation Question 14</h1>
+        <p>Question: How do you reverse the bits in an integer in C?</p>
+        <p><span class="answer">Answer:</span> You can reverse the bits using a loop and bitwise operators, e.g.,</p>
+        <pre><code>unsigned int reverseBits(unsigned int num) {
+    unsigned int numOfBits = sizeof(num) * 8;
+    unsigned int reverseNum = 0;
+    for (int i = 0; i < numOfBits; i++) {
+        if (num & (1 << i)) {
+            reverseNum |= 1 << ((numOfBits - 1) - i);
+        }
+    }
+    return reverseNum;
+}</code></pre>
+        <p class="explanation">Explanation: This code reverses the bits in the integer.</p>
+    </div>
+
+    <div class="question">
+        <h1>C Bit Manipulation Question 15</h1>
+        <p>Question: How do you check if a number is a power of 2 in C using bit manipulation?</p>
+        <p><span class="answer">Answer:</span> You can check if a number is a power of 2 by counting set bits and checking if there is only one set bit, e.g.,</p>
+        <pre><code>bool isPowerOfTwo(int num) {
+    return num > 0 && (num & (num - 1)) == 0;
+}</code></pre>
+        <p class="explanation">Explanation: This code checks if there is only one set bit in the number.</p>
+    </div>
+
+</body>
+</html>

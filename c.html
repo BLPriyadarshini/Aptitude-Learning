@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOPICS</title>
+    <link rel="stylesheet">
+</head>
+<style>
+    a:link {
+       color: green;
+       background-color: transparent;
+       text-decoration: none;
+    }
+
+    a:visited {
+      color: pink;
+      background-color: transparent;
+      text-decoration: none;
+   }
+
+   a:hover {
+       color: green;
+       background-color: transparent;
+       text-decoration: underline;
+   }
+
+   a:active {
+      color: yellow;
+      background-color: transparent;
+      text-decoration: underline;
+   }
+
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-image: url("https://media.istockphoto.com/id/1435226158/photo/circuit-board-background-computer-data-technology-artificial-intelligence.webp?b=1&s=170667a&w=0&k=20&c=d-gHg6uCV5JEaKJCpxhJ01Ab19m032daRC8vDo8NzDI=");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;   
+     }
+
+    h1 {
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .topic-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+   .topic {
+        flex: 1;
+        max-width: 250px;
+        background-color: #fff;
+        border: 1px solid black;
+        padding: 20px;
+        margin: 10px;
+        text-align: center;
+        border-radius:10px;
+    }
+    .topic:hover {
+        transform: scale(1.2);
+    }
+
+    .topic img {
+        max-width: 90%;
+        border-radius:15px;
+        border:2px solid black;
+    }
+
+    select {
+        width: 100%;
+        padding: 5px;
+    }
+    button
+    {
+    background-color:darkgreen;
+    border-radius:7px;
+    border:1px solid black;
+}
+button:hover
+{
+
+}
+</style>
+<body>
+   <font type="impact"> <h1>CHOOSE YOUR TOPIC</h1></font>
+    <div class="topic-list">
+        <div class="topic">
+            <img src="https://sp-ao.shortpixel.ai/client/to_auto,q_glossy,ret_img,w_561/https://simplesnippets.tech/wp-content/uploads/2018/03/pointers-in-c.jpg" alt="Pointers">
+            <h2><a href="poin.html">Pointers</a></h2>
+        </div>
+        <div class="topic">
+            <img src= "https://www.shutterstock.com/shutterstock/photos/2211777343/display_1500/stock-photo-c-sharp-programming-language-source-code-example-on-monitor-c-source-code-2211777343.jpg" alt="Strings">
+            <h2><a href="str.html">Strings</a></h2>
+      
+        </div>
+        <div class="topic">
+            <img src= "https://www.simplilearn.com/ice9/free_resources_article_thumb/Vaibhav-Arrays%20Article/Arrays_in_ds-what-is-array-img1.PNG" alt="Arrays">
+            <h2><a href="arr.html">Arrays</a></h2>
+
+        </div>
+        <div class="topic">
+            <img src= "https://media.geeksforgeeks.org/wp-content/uploads/Array_32bit.png" alt="Bit manipulation">
+            <h2><a href="bm.html">Bit Manipulation</a></h2>
+         
+        </div>
+    </div>
+</body>
+</html>

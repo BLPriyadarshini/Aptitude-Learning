@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C String Questions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image : url("https://media.istockphoto.com/id/1395321519/photo/digital-background-with-movement-of-glowing-particles-complex-technologies-of-big-data-3d.webp?b=1&s=170667a&w=0&k=20&c=0SWIokXTPzOv6WfRPmyBIV9-6Twxs7SfMAMZCJ6Pw-A=");
+background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;      
+  }
+        .question {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 24px;
+        }
+        p {
+            font-size: 18px;
+        }
+        .answer {
+            font-weight: bold;
+            color: green;
+        }
+        .explanation {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="question">
+        <h1>C String Question 1</h1>
+        <p>Question: What is a C string?</p>
+        <p><span class="answer">Answer:</span> A C string is an array of characters terminated by a null character '\0'.</p>
+        <p class="explanation">Explanation: C strings are used to represent and manipulate text in C.</p>
+    </div>
+
+    <!-- Repeat the following structure for each of the C string questions -->
+
+    <div class="question">
+        <h1>C String Question 2</h1>
+        <p>Question: How do you declare and initialize a C string in C?</p>
+        <p><span class="answer">Answer:</span> You can declare and initialize a C string as an array of characters, e.g., char myString[] = "Hello";</p>
+        <p class="explanation">Explanation: The null character is automatically added at the end.</p>
+    </div>
+
+    <div class="question">
+        <h1>C String Question 3</h1>
+        <p>Question: How do you find the length of a C string in C?</p>
+        <p><span class="answer">Answer:</span> You can use the `strlen` function, e.g., `int length = strlen(myString);`</p>
+        <p class="explanation">Explanation: `strlen` returns the number of characters in the string, excluding the null character.</p>
+    </div>
+
+    <div class="question">
+        <h1>C String Question 4</h1>
+        <p>Question: How do you compare two C strings in C?</p>
+        <p><span class="answer">Answer:</span> You can use the `strcmp` function to compare two C strings, e.g., `int result = strcmp(str1, str2);`</p>
+        <p class="explanation">Explanation: `strcmp` returns 0 if the strings are equal, a positive value if the first string is greater, and a negative value if the second string is greater.</p>
+    </div>
+
+    <div class="question">
+        <h1>C String Question 5</h1>
+        <p>Question: How do you concatenate two C strings in C?</p>
+        <p><span class="answer">Answer:</span> You can use the `strcat` function to concatenate two C strings, e.g., `strcat(dest, src);`</p>
+        <p class="explanation">Explanation: `strcat` appends the content of `src` to the end of `dest`.</p>
+    </div>
+
+    <div class="question">
+        <h1>C String Question 6</h1>
+        <p>Question: How do you copy a C string to another C string in C?</p>
+        <p><span class="answer">Answer:</span> You can use the `strcpy` function to copy a C string, e.g., `strcpy(dest, src);`</p>
+        <p class="explanation">Explanation: `strcpy` copies the content of `src` to `dest`.</p>
+    </div>
+
+    <div class="question">
+        <h1>C String Question 7</h1>
+        <p>Question: What is the purpose of the `strncpy` function in C?</p>
+        <p><span class="answer">Answer:</span> `strncpy` is used to copy a specified number of characters from one C string to another, e.g., `strncpy(dest, src, n);`</p>
+        <p class="explanation">Explanation: It ensures that at most `n` characters are copied and prevents buffer overflow.</p>
+    </div>
+
+    <div class="question">
+        <h1>C String Question 8</h1>
+        <p>Question: How do you find the first occurrence of a character in a C string?</p>
+        <p><span class="answer">Answer:</span> You can use the `strchr` function, e.g., `char *result = strchr(myString, 'c');`</p>
+        <p class="explanation">Explanation: `strchr` returns a pointer to the first occurrence of the character or NULL if not found.</p>
+    </div>
+
+    <div class="question">
+        <h1>C String Question 9</h1>
+        <p>Question: What is the purpose of the `strstr` function in C?</p>
+        <p><span class="answer">Answer:</span> `strstr` is used to find the first occurrence of a substring in a C string, e.g., `char *result = strstr(myString, "world");`</p>
+        <p class="explanation">Explanation: `strstr` returns a pointer to the first occurrence of the substring or NULL if not found.</p>
+    </div>
+
+    <div class="question">
+        <h1>C String Question 10</h1>
+        <p>Question: How do you convert a C string to an integer in C?</p>
+        <p><span class="answer">Answer:</span> You can use the `atoi` function, e.g., `int num = atoi(myString);`</p>
+        <p class="explanation">Explanation: `atoi` parses the C string and converts it to an integer.</p>
+    </div>
+
+    <div class="question">
+        <h1>C String Question 11</h1>
+        <p>Question: How do you convert an integer to a C string in C?</p>
+        <p><span class="answer">Answer:</span> You can use the `sprintf` or `snprintf` functions, e.g., `sprintf(myString, "%d", num);`</p>
+        <p class="explanation">Explanation: These functions format the integer as a string and store it in `myString`.</p>
+    </div>
+
+    <div class="question">
+        <h1>C String Question 12</h1>
+        <p>Question: What is a null-terminated string in C?</p>
+        <p><span class="answer">Answer:</span> A null-terminated string is a C string that ends with a null character ('\0'). It is the standard way to represent strings in C.</p>
+        <p class="explanation">Explanation: The null character indicates the end of the string.</p>
+    </div>
+
+    <div class="question">
+        <h1>C String Question 13</h1>
+        <p>Question: How do you find the last occurrence of a character in a C string?</p>
+        <p><span class="answer">Answer:</span> You can use the `strrchr` function, e.g., `char *result = strrchr(myString, 'c');`</p>
+        <p class="explanation">Explanation: `strrchr` returns a pointer to the last occurrence of the character or NULL if not found.</p>
+    </div>
+
+    <div class="question">
+        <h1>C String Question 14</h1>
+        <p>Question: What is the purpose of the `strncat` function in C?</p>
+        <p><span class="answer">Answer:</span> `strncat` is used to concatenate a specified number of characters from one C string to another, e.g., `strncat(dest, src, n);`</p>
+        <p class="explanation">Explanation: It ensures that at most `n` characters are concatenated and prevents buffer overflow.</p>
+    </div>
+
+    <div class="question">
+        <h1>C String Question 15</h1>
+        <p>Question: How do you compare a portion of two C strings in C?</p>
+        <p><span class="answer">Answer:</span> You can use the `strncmp` function to compare a specified number of characters from two C strings, e.g., `int result = strncmp(str1, str2, n);`</p>
+        <p class="explanation">Explanation: `strncmp` compares at most `n` characters and returns 0 if they are equal.</p>
+    </div>
+
+</body>
+</html>
