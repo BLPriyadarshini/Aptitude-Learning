@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Project.css">
-    <title>Quiz </title>
+    <title>Aptitude </title>
+    
+
+
 </head>
 <style>
 body {
   background-image:url("https://itsengg.edu.in/Aptitute.png");
-  background-repeat: no-repeat;
+   background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
 }
@@ -32,5 +35,33 @@ body {
             <a href="cpp.html">Choose your topic</a>
         </section>
     </main>
+<script>
+  // Function to handle the topic link click
+  function handleTopicClick(event) {
+    var topicName = event.target.previousElementSibling.textContent;
+    alert('You selected the ' + topicName + ' topic.');
+  }
+
+  // Add an event listener to each topic link
+  var topicLinks = document.querySelectorAll('.topic a');
+  for (var i = 0; i < topicLinks.length; i++) {
+    topicLinks[i].addEventListener('click', handleTopicClick);
+  }
+</script>
+<script>
+  // Function to handle the parallax effect
+  function handleParallax(event) {
+    const bg = document.querySelector('body');
+    const mouseX = event.clientX;
+    const mouseY = event.clientY;
+    const offsetX = mouseX / window.innerWidth;
+    const offsetY = mouseY / window.innerHeight;
+    bg.style.transform = `translate(-${offsetX * 50}px, -${offsetY * 50}px)`;
+  }
+
+  // Add an event listener to the body element for mousemove events
+  document.body.addEventListener('mousemove', handleParallax);
+</script>
+
 </body>
 </html>
